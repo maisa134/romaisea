@@ -136,7 +136,9 @@ export default {
       if (product.spaces > 0)
       {
         product.spaces -= 1;
-        this.cart_items.push({ id: product.id, topic: product.topic, location: product.location, cost: product.cost, spaces: product.spaces })
+        this.cart_items.push({ id: product.id, topic: product.topic, location: product.location, cost: product.cost, spaces: product.spaces });
+        const parsed = JSON.stringify(this.cart_items);
+        localStorage.setItem('cart_items', parsed);
       }
     }
   }
