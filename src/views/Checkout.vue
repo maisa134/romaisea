@@ -8,8 +8,17 @@
     <p>Phone number   <input v-model="number"></p>
     <button :disabled="is_disabled()" v-on:click="message">Checkout</button>
 
-    <h2>Your cart items</h2>
     
+    <h2>Your cart items</h2>
+    <div v-for="lesson in cart_items" :key="lesson.id"> 
+      <ul>
+        <li>Topic: {{ lesson.topic}}</li>
+        <li>Location: {{ lesson.location}} </li>
+        <li>Cost: {{ lesson.cost}}</li>
+        <li>Spaces: {{ lesson.spaces}}</li> 
+      </ul>
+      <button class="button"  v-on:click="remove(lesson)" >Remove</button>
+    </div>
     <button>
       <router-link to="/">Back to Index</router-link>
     </button>     
