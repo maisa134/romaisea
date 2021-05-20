@@ -25,7 +25,7 @@ export const products = [
     {
         "id": 2,
         "topic": "History",
-        "location": "Harrow",
+        "location": "North London",
         "cost": 12,
         "spaces": 2,
         "image": icon4
